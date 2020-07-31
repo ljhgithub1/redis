@@ -9,8 +9,6 @@ import com.ljh.redis.util.WebSocketServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 /**
  * @Author: Liu.jihong
  * @Date: 2020/7/29 17:03

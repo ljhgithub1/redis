@@ -1,8 +1,6 @@
 package com.ljh.redis.controller;
 
-import com.ljh.redis.pojo.SysMenu;
 import com.ljh.redis.serivce.SysMenuService;
-import com.ljh.redis.util.WebSocketServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
