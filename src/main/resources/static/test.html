@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>websocket</title>
+
+<script>
+    var websocket=null;
+    if('websocket' in window){
+        websocket=new WebSocket('ws://localhost:8080//websocket');
+    }else{
+        alert('该浏览器不支持websocket！');
+    }
+    websocket.onopen=function (event) {
+        console.log('连接成功');
+    }
+    websocket.onclose=function (event) {
+        console.log('关闭连接');
+    }
+    websocket.onmessage=function (event) {
+        console.log('收到消息：'+event.data);
+    }
+    websocket.onerror=function (event) {
+        console.log('websocket通信发生错误');
+    }
+    window.onbeforeunload=function () {
+      websocket.close();
+    }
+</script>
+
+</head>
+<body>
+
+<div id="sse">
+    <a href="javascript:WebSocketTest()">运行 WebSocket</a>
+</div>
+
+</body>
+</html>
